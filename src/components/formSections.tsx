@@ -35,7 +35,6 @@ const FormSections = ({
   checkList,
   warehousesList,
   priceList,
-  contragetnsList,
   organizationList,
   check,
   setCheck,
@@ -47,7 +46,7 @@ const FormSections = ({
   setPrice,
 }: ClientFormForSaleProps) => {
   const [showOrganizationList, setShowOrganizationList] = React.useState<boolean>(false);
-  const [showContragentsList, setShowContragentsList] = React.useState<boolean>(false);
+
   const [showCheckList, setShowCheckList] = React.useState<boolean>(false);
   const [showPriceList, setShowPriceList] = React.useState<boolean>(false);
   const [showWarehousesList, setShowWarehousesList] = React.useState<boolean>(false);
@@ -61,7 +60,6 @@ const FormSections = ({
     function handleClickOutside(e: MouseEvent) {
       const target = e.target as HTMLElement;
       if (!target.closest(".organizationWrapper")) setShowOrganizationList(false);
-      if (!target.closest(".contragentsWrapper")) setShowContragentsList(false);
       if (!target.closest(".checkWrapper")) setShowCheckList(false);
       if (!target.closest(".priceWrapper")) setShowPriceList(false);
       if (!target.closest(".warehouseWrapper")) setShowWarehousesList(false);
